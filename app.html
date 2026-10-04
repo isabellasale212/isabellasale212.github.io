@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Athlete Monitoring App | Isabella Sale</title>
+  <meta name="description" content="Case study: a self-built wellness, load and injury monitoring app for the University of Bath Women's 1st lacrosse team, built in AppSheet and Google Sheets.">
+  <link rel="icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Isabella Sale<span>Sports Scientist</span></a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <a class="cta" href="index.html#contact">Get in touch</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="cs-hero">
+    <a class="back" href="index.html#work">← All work</a>
+    <span class="eyebrow">Case study · Applied sport technology</span>
+    <h1>One app running an entire lacrosse squad.</h1>
+    <p class="lede" style="max-width: 60ch;">Over two months I designed, built and self-coded a downloadable app for the University of Bath Women's 1st lacrosse team. It captured daily wellness and injury data, sleep and training load, the fixture calendar and the full set-play playbook.</p>
+    <dl class="cs-facts">
+      <div><dt>Role</dt><dd>Sole designer and builder. Team captain and coach</dd></div>
+      <div><dt>Squad</dt><dd>Women's 1st team, 20 athletes</dd></div>
+      <div><dt>Built with</dt><dd>AppSheet, Google Sheets, custom app logic</dd></div>
+      <div><dt>When</dt><dd>2025 - 26 season</dd></div>
+    </dl>
+  </header>
+
+  <section class="cs-block reveal">
+    <div><span class="label">The problem</span><h2>Readiness was being guessed, not measured.</h2></div>
+    <div class="body">
+      <p>As captain and coach I was planning sessions without a reliable read on how the squad was actually feeling. Paper forms and scattered group chats meant information arrived late, or not at all.</p>
+      <p>I wanted the data to change what happened <em>that day</em>, rather than being logged after the fact.</p>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">The metrics</span><h2>Four signals and an injury flag.</h2></div>
+    <div class="body">
+      <p>Players completed a check-in before every training session and could flag any injuries or niggles that might affect their play.</p>
+      <p>I chose <b>soreness, stress, fatigue and sleep</b> as the core metrics because together they give an early read on both physical load and readiness. These are the signals that precede overtraining and injury.</p>
+      <p>The check-in was kept deliberately short, logged in under 20 seconds, so players would actually complete it every time. That design choice is what drove compliance up.</p>
+    </div>
+  </section>
+
+  <section class="reveal" style="padding: 0 0 clamp(48px, 7vw, 88px);">
+    <span class="label" style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:18px;">In the players' hands</span>
+    <div class="phone-row">
+      <figure><img src="assets/img/app-checkin.webp" alt="Daily check-in screen with sliders for soreness, stress and fatigue" width="700" height="1092" loading="lazy"><figcaption><b>Daily check-in</b>Soreness, stress, fatigue, sleep and an injury flag, logged in under 20 seconds.</figcaption></figure>
+      <figure><img src="assets/img/app-monitoring.webp" alt="Live monitoring log showing player entries by date" width="700" height="1047" loading="lazy"><figcaption><b>Live monitoring</b>Every entry streams into a running log staff can read at a glance, so a rising fatigue or injury pattern is spotted before it becomes a problem.</figcaption></figure>
+      <figure><img src="assets/img/app-playbook.webp" alt="Playbook screen with a searchable library of drills and set plays" width="700" height="1047" loading="lazy"><figcaption><b>Set-play playbook</b>A searchable library of drills and set plays in every player's pocket, so less pitch time was lost re-explaining plays.</figcaption></figure>
+      <figure><img src="assets/img/app-profile.webp" alt="Player profile screen" width="700" height="1092" loading="lazy"><figcaption><b>Player profiles</b>Fitness score, goals and fines beside each player's full wellness history, so decisions were made on the individual, not a squad average.</figcaption></figure>
+      <figure><img src="assets/img/app-schedule.webp" alt="Training schedule screen" width="700" height="1047" loading="lazy"><figcaption><b>Training schedule</b>Sessions, times and locations updated from one sheet, so a single change reached everyone instantly.</figcaption></figure>
+      <figure><img src="assets/img/app-fixtures.webp" alt="Fixtures list screen" width="700" height="1047" loading="lazy"><figcaption><b>Fixtures</b>The full season fixture list with home and away, so travel and recovery could be planned around match load, not just training.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">How it works</span><h2>Six modules, one Google Sheet behind them all.</h2></div>
+    <div class="body">
+      <div class="flow">
+        <div><small>01</small>Players open the app and tap <b>Check In</b>.</div>
+        <div><small>02</small><b>AppSheet</b> validates and writes the entry.</div>
+        <div><small>03</small><b>Google Sheets</b> holds the live database.</div>
+        <div><small>04</small>Staff read monitoring, profiles and load.</div>
+      </div>
+      <p style="margin-top: 28px;">Every screen in the app is a view onto one linked workbook, with live two-way sync. The rows below are what actually lands in the sheet: live, timestamped and readable by staff. Player names are anonymised.</p>
+      <img class="sheet-img" src="assets/img/sheet-players.webp" alt="Players table in the Google Sheet with position, 600m test, goals and fines" width="1600" height="553" loading="lazy">
+      <img class="sheet-img" src="assets/img/sheet-monitoring.webp" alt="Monitoring table in the Google Sheet with soreness, stress, fatigue, sleep and injury columns" width="1600" height="631" loading="lazy">
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">The impact</span><h2>Self-built, and in daily use by the squad.</h2></div>
+    <div class="body">
+      <div class="impact">
+        <div><b>~9 in 10</b><h4>Check-in completion</h4><p>A 20-second check-in in an app players already had removed the friction of paper forms. Most of the squad logged in consistently, giving staff data they could trust.</p></div>
+        <div><b>Days, not weeks</b><h4>Injuries caught early</h4><p>Niggles were flagged before sessions, so staff could rest or modify a player at the first sign, while problems were still small.</p></div>
+        <div><b>Every week</b><h4>Less player burnout</h4><p>Fatigue and sleep trends let coaches adapt session length and intensity to how the squad actually felt, easing load in heavy weeks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">What I learned</span><h2>Compliance is a design problem.</h2></div>
+    <div class="body">
+      <p>The best metric is worthless if athletes don't log it. Keeping the check-in short and living in an app they already had did more for data quality than any extra variable could.</p>
+      <p>It's the same hands-on, data-first approach I want to bring to wearable tech and performance analytics: build the tool, close the loop, act on what it shows.</p>
+    </div>
+  </section>
+
+  <a class="next-case" href="research.html">
+    <div><span>Next case study</span><h3>Do jump tests reflect braking?</h3></div>
+    <span class="arrow-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+  </a>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Isabella Sale</span>
+    <a href="mailto:isabellasale212@gmail.com">isabellasale212@gmail.com</a>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
