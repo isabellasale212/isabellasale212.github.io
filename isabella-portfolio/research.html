@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do Jump Tests Reflect Braking? | Isabella Sale</title>
+  <meta name="description" content="Dissertation case study: does eccentric rate of force development from jump tests reflect eccentric braking in a 180 degree change of direction? Motion capture and force plates with 20 athletes.">
+  <link rel="icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Isabella Sale<span>Sports Scientist</span></a>
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <a class="cta" href="index.html#contact">Get in touch</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="cs-hero">
+    <a class="back" href="index.html#work">← All work</a>
+    <span class="eyebrow">Case study · Dissertation research</span>
+    <h1>Do jump tests tell you how well an athlete brakes?</h1>
+    <p class="lede" style="max-width: 62ch;">Coaches often use jump tests to judge braking ability. I tested that assumption with motion capture and force plates. Eccentric rate of force development (RFD) from jumps did not reflect braking RFD in a 180° change of direction.</p>
+    <dl class="cs-facts">
+      <div><dt>Athletes</dt><dd>20 BUCS athletes. 12 male, 8 female</dd></div>
+      <div><dt>Sports</dt><dd>Rugby union, lacrosse, tennis, football, netball</dd></div>
+      <div><dt>Kit</dt><dd>12-camera Qualisys, 4 Kistler force plates at 2000 Hz</dd></div>
+      <div><dt>Supervisor</dt><dd>Dr Adam Brazil, University of Bath, 2026</dd></div>
+    </dl>
+  </header>
+
+  <section class="cs-block reveal">
+    <div><span class="label">The question</span><h2>Braking is the hardest part of a 180° turn.</h2></div>
+    <div class="body">
+      <p>In a 180° change of direction (COD), slowing down fast enough is the main mechanical constraint on performance. Eccentric RFD, how quickly an athlete can produce braking force, sits at the centre of that.</p>
+      <p>Jump tests such as the countermovement jump (CMJ) and drop jump (DJ) are quick and common, so coaches use them to infer braking ability. But no study had directly compared force-plate eccentric RFD from jumps with force-plate braking RFD in a 505 test.</p>
+      <ul>
+        <li>Does eccentric RFD in the CMJ, DJ and broad jump (BJ) correlate with braking RFD in the 505 plant step?</li>
+        <li>Do athletes with higher eccentric RFD have faster 505 times?</li>
+        <li>Do fast and slow performers differ in eccentric RFD across tasks?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">Method</span><h2>Four tasks, one lab session per athlete.</h2></div>
+    <div class="body">
+      <p>Each athlete completed three CMJs, drop jumps from a 20 cm box and broad jumps in a randomised order, then the 505 test three times on each leg with a 5 m run-in, timed with gates.</p>
+      <div class="flow" style="margin: 26px 0;">
+        <div><small>01 Capture</small>Qualisys at 200 Hz. Kistler force plates at 2000 Hz.</div>
+        <div><small>02 Model</small>Visual3D model, events and 20 Hz Butterworth filter.</div>
+        <div><small>03 Compute</small>MATLAB eccentric RFD (ΔForce / ΔTime), normalised to body mass.</div>
+        <div><small>04 Test</small>Correlations, group comparisons and RM-ANOVA in JASP.</div>
+      </div>
+      <p>Vertical force was used for the CMJ and DJ. Horizontal force was used for the BJ and the 505 plant step, where braking happens.</p>
+      <div class="phone-row" style="grid-template-columns: 1.5fr 1fr; margin-top: 20px;">
+        <figure style="padding:14px;"><img src="assets/img/diss-visual3d-model.webp" alt="Visual3D model with skeleton and kinetic and kinematic signal tree" width="822" height="561" loading="lazy" style="max-height:none;width:100%;border-radius:8px;"><figcaption><b>Visual3D model</b>Segment signals built from the static and dynamic trials.</figcaption></figure>
+        <figure style="padding:14px;"><img src="assets/img/diss-visual3d-events.webp" alt="Visual3D event editor with heel strike and toe off labels" width="432" height="234" loading="lazy" style="max-height:none;width:100%;border-radius:8px;"><figcaption><b>Event detection</b>Labelling foot contacts to isolate the phases being analysed.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">Results</span><h2>Jump RFD did not track braking RFD.</h2></div>
+    <div class="body">
+      <div class="kv" style="margin-bottom: 22px;">
+        <div><b>0 of 6</b><span>jump RFD vs 505 braking RFD correlations were significant</span></div>
+        <div><b>r = -0.55</b><span>CMJ peak RFD vs 505 time. The only significant link (p = 0.014)</span></div>
+        <div><b>ηp² = 0.77</b><span>large differences in RFD between tasks</span></div>
+      </div>
+      <div class="figure">
+        <h4>Every jump-to-505 relationship tested</h4>
+        <p class="sub">Correlation coefficient for each comparison. Filled navy dot = statistically significant (p &lt; 0.05). Values from the submitted dissertation.</p>
+        <div data-corr-plot></div>
+      </div>
+      <p style="margin-top: 22px;">Fast and slow performers (median split at 2.42 s) did not differ significantly in any RFD variable.</p>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">Within each task</span><h2>Only the drop jump tracked its own outcome.</h2></div>
+    <div class="body">
+      <p>Eccentric RFD explained about half the variation in drop jump RSI (R² = 0.49). For the CMJ, broad jump and 505, RFD explained very little of the outcome. The quality is real, but it is specific to the movement.</p>
+      <div class="figure" style="padding: 12px;">
+        <img src="assets/img/diss-scatter-plots.webp" alt="Four scatter plots: CMJ RFD vs jump height R squared 0.14, BJ RFD vs jump distance R squared 0.01, DJ RFD vs RSI R squared 0.49, 505 RFD vs time R squared 0.03" width="1600" height="1242" loading="lazy" style="border-radius:8px;">
+      </div>
+      <p class="note" style="margin-top: 10px;">Average eccentric RFD normalised to body mass on each x-axis.</p>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">So what</span><h2>What this means for practitioners.</h2></div>
+    <div class="body">
+      <div class="takeaway">
+        <span class="label">Key takeaway</span>
+        <p>Eccentric RFD is task-specific. A good jump score does not mean an athlete brakes well. To profile and train braking, use COD-specific force-plate metrics, including horizontal braking impulse.</p>
+      </div>
+      <p style="margin-top: 24px;">Why the mismatch? Jumps are bilateral and mostly vertical. Braking in a 505 is unilateral, horizontal and shaped by technique such as trunk lean, foot placement and approach speed.</p>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <div><span class="label">Limitations</span><h2>What I'd do differently.</h2></div>
+    <div class="body">
+      <ul>
+        <li>A pre-planned 505 in the lab does not capture spontaneous braking in a match.</li>
+        <li>CMJ eccentric RFD showed only moderate trial-to-trial reliability, which can weaken correlations.</li>
+        <li>Broad jump distance was predicted from force and centre of mass data, not measured directly.</li>
+        <li>RFD is one component of COD. Next time I would analyse braking impulse and the wider physical profile alongside it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <a class="next-case" href="dashboard.html">
+    <div><span>Next</span><h3>Athlete monitoring dashboard</h3></div>
+    <span class="arrow-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
+  </a>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Isabella Sale</span>
+    <a href="mailto:isabellasale212@gmail.com">isabellasale212@gmail.com</a>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
