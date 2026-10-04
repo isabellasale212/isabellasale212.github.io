@@ -1,11 +1,11 @@
-# Isabella Sale | Sports Scientist and Performance Analytics
+# Isabella Sale | Sports Scientist and Performance Analyst
 
-Personal portfolio site, hosted with GitHub Pages.
+Athlete first. Data fluent. I build data systems that show coaches performance the way they want to see it.
 
-- **Athlete monitoring app** (`app.html`): a wellness, load and injury tracking app built in AppSheet and Google Sheets for the University of Bath Women's 1st lacrosse team.
-- **Dissertation** (`research.html`): does eccentric RFD from jump tests reflect braking in a 180° change of direction? Qualisys motion capture, Kistler force plates, Visual3D and MATLAB.
-- **Monitoring dashboard** (`dashboard.html`): an interactive, Power BI style report recreating the reporting I built at Scottish Rugby, rebuilt for Bath Lacrosse with simulated data.
+- **Lacrosse App** (`app.html`): wellness and load tracking for the University of Bath Women's 1st lacrosse team, built with AppSheet and Python.
+- **Performance Dashboard** (`dashboard.html`): an MSc project experimenting with how to show lacrosse data to coaches. Power BI style, interactive, simulated data.
+- **Braking Study** (`research.html`): my dissertation. Do jump tests predict braking in a 180° turn? Motion capture, force plates, Visual3D and MATLAB.
 
-Built with plain HTML, CSS and JavaScript. No frameworks, no build step.
+Plain HTML, CSS and JavaScript. No build step.
 
 Contact: isabellasale212@gmail.com · [LinkedIn](https://www.linkedin.com/in/isabella-sale-sport)

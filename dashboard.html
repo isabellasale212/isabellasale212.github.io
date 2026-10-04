@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Athlete Monitoring Dashboard | Isabella Sale</title>
-  <meta name="description" content="An interactive recreation of the athlete monitoring reports I built in Power BI at Scottish Rugby, rebuilt for Bath Lacrosse with sample data.">
-  <link rel="icon" href="assets/img/apple-touch-icon.png">
+  <title>Performance Dashboard | Isabella Sale</title>
+  <meta name="description" content="An MSc project experimenting with how to show lacrosse performance data to coaches. Power BI style, interactive, sample data.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -86,6 +88,13 @@
       .pbi-head .acts .lbl { display: none; }
     }
 
+    .result-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 18px; }
+    .result-strip div { background: var(--surface); border-radius: 14px; padding: 18px 20px; border: 1px solid var(--line); }
+    .result-strip div:last-child { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .result-strip span { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .result-strip div:last-child span { color: #c9cdf3; }
+    .result-strip b { font-weight: 500; font-size: 17px; line-height: 1.35; }
+    @media (max-width: 760px) { .result-strip { grid-template-columns: 1fr; } }
     .dash-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 72px; }
     .dash-notes div { background: var(--surface); border-radius: var(--radius); padding: 24px; }
     .dash-notes h3 { font-size: 20px; margin-bottom: 8px; }
@@ -97,12 +106,12 @@
 
 <nav class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html">Isabella Sale<span>Sports Scientist</span></a>
+    <a class="brand" href="index.html">Isabella Sale<span>Sports Scientist &amp; Performance Analyst</span></a>
     <ul>
+      <li><a href="index.html#edge">My edge</a></li>
       <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#impact">Impact</a></li>
       <li><a href="index.html#experience">Experience</a></li>
-      <li><a href="index.html#approach">Approach</a></li>
-      <li><a href="index.html#about">About</a></li>
     </ul>
     <a class="cta" href="index.html#contact">Get in touch</a>
   </div>
@@ -111,17 +120,22 @@
 <main class="wrap">
   <header class="dash-intro">
     <a class="back" href="index.html#work">← All work</a><br>
-    <span class="eyebrow">Example dashboard · Power BI style</span>
-    <h1>Athlete monitoring, one screen.</h1>
-    <p class="lede" style="max-width: 64ch;">At Scottish Rugby I built Power BI reports that turned GPS, jump testing and wellness data into decisions for coaching, medical and S&amp;C staff. That data is confidential, so I've recreated the reporting style here for Bath Lacrosse.</p>
-    <div class="sample-note"><span>ⓘ</span><span><b>Sample data.</b> Players are anonymised and every number below is simulated to show the report design and interactions. It does not contain real Scottish Rugby or Bath Lacrosse data.</span></div>
+    <span class="eyebrow">MSc project · Power BI style</span>
+    <h1>One screen. Every answer.</h1>
+    <p class="lede" style="max-width: 64ch;">At Scottish Rugby I worked with Power BI reports and saw how coaches used them. Now, in my MSc, I'm building my own. I'm experimenting with how to show data, using lacrosse data sets from the US.</p>
+    <div class="result-strip">
+      <div><span>What I took from Scottish Rugby</span><b>How coaches read reports</b></div>
+      <div><span>What I'm testing</span><b>New ways to show the data</b></div>
+      <div><span>Result</span><b>Better S&amp;C programmes, shaped by my athlete experience</b></div>
+    </div>
+    <div class="sample-note"><span>ⓘ</span><span><b>Sample data.</b> This public version runs on simulated numbers in a Bath Lacrosse style, so it can be shared openly. It contains no real Scottish Rugby, Bath Lacrosse or US data.</span></div>
   </header>
 
   <div class="pbi" id="pbi">
     <div class="pbi-head">
       <div class="ttl">
         <img src="assets/img/app-icon.png" alt="">
-        <h2>Bath Lacrosse Athlete Monitoring <small>Women's 1st team · 2025 - 26 season · Sample data</small></h2>
+        <h2>Lacrosse Performance <small>Women's 1st team · 2025 - 26 season · Sample data</small></h2>
       </div>
       <div class="acts">
         <button class="pbi-btn" id="infoBtn" title="About this report">ⓘ <span class="lbl">About</span></button>
@@ -147,13 +161,13 @@
   </div>
 
   <section class="dash-notes">
-    <div class="reveal"><h3>Built for the reader</h3><p>KPIs follow the order staff ask questions: did players check in, are they ready, what load did they do, how are they jumping, who is unavailable.</p></div>
-    <div class="reveal"><h3>Click to filter</h3><p>Like Power BI, every view cross-filters. Click a position bar or a session type in the donut, or use the slicer to drill into one player.</p></div>
-    <div class="reveal"><h3>Flags, not just charts</h3><p>The acute:chronic ratio panel and readiness heatmap surface the players who need a conversation before the next session.</p></div>
+    <div class="reveal"><h3>Coach first</h3><p>KPIs follow the order coaches ask: did they check in, are they ready, what load, how are they jumping, who is out?</p></div>
+    <div class="reveal"><h3>Click to filter</h3><p>Every chart filters the rest. Click a position, a session type or a player name.</p></div>
+    <div class="reveal"><h3>Flags, not just charts</h3><p>The workload ratio and readiness heatmap show who needs a chat before the next session.</p></div>
   </section>
 
-  <a class="next-case" href="app.html">
-    <div><span>Related</span><h3>The app that collects the wellness data</h3></div>
+  <a class="next-case" href="research.html">
+    <div><span>Next</span><h3>Braking Study</h3></div>
     <span class="arrow-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 18L18 6M8 6h10v10"/></svg></span>
   </a>
 </main>

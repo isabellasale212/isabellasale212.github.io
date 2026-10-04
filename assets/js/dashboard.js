@@ -419,7 +419,7 @@
     if (box) { box.remove(); return; }
     box = document.createElement('div'); box.id = 'aboutBox';
     box.style.cssText = 'background:#fff;border-radius:10px;padding:14px 18px;margin:10px 0 0;font-size:13.5px;color:#1b1d29;border:1px solid #dfe2ec';
-    box.innerHTML = '<b>About this report.</b> A recreation of the Power BI reporting style I built at Scottish Rugby, rebuilt for Bath Lacrosse. Data is simulated: 20 anonymised players, 23 weeks, GPS load, pre-session wellness check-ins, weekly CMJ testing and injury flags. Click charts to cross-filter, use the slicer to drill into a position or player, and Reset Filters to start again.';
+    box.innerHTML = '<b>About this report.</b> An MSc project exploring how to show performance data to coaches, informed by working with Power BI reports at Scottish Rugby. My working versions use US lacrosse data sets. This public version is simulated: 20 anonymised players, 23 weeks, GPS load, pre-session wellness check-ins, weekly CMJ testing and injury flags. Click charts to cross-filter, use the slicer to drill into a position or player, and Reset Filters to start again.';
     $('.pbi-head').after(box);
   }
 
